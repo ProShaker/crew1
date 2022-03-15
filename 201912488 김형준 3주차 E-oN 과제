@@ -1,5 +1,4 @@
 #include <iostream>
-#include <array>
 using namespace std;
 
 void different_Sum(const int (&array)[6]) // 참조로 전달을 활용해 함수 파라미터로 배열을 넘겨줌
