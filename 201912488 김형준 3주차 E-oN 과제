@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int different_Sum(const int (&array)[7]) // 참조로 전달을 활용해 함수 파라미터로 배열을 넘겨줌
+int different_Sum(const int (&array)[6]) // 참조로 전달을 활용해 함수 파라미터로 배열을 넘겨줌
 {
 	int k = 0;
 	for (int e : array)		// 반복문으로 배열에 존재하는 값 더함
