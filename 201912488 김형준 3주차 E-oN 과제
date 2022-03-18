@@ -6,7 +6,7 @@ int different_Sum(const int (&array)[6]) // 참조로 전달을 활용해 함수
 	int k = 0;
 	for (int e : array)		// 반복문으로 배열에 존재하는 값 더함
 		k += e;
-	return k;			// 더한 값 출력
+	return k;			// 더한 값 반환
 						
 }
 
