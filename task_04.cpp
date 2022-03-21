@@ -5,21 +5,21 @@ int main()
 {
 	int array[6]{ 0 }, x, y, iTemp;
 	scanf_s("%d %d %d %d %d %d", array, array + 1,
-		array + 2, array + 3, array + 4, array + 5);	// ¹è¿­ÀÇ °¢ ¿ø¼Ò¿¡ °ªÀ» ÀÔ·Â¹ŞÀ½
+		array + 2, array + 3, array + 4, array + 5);	// ë°°ì—´ì˜ ê° ì›ì†Œì— ê°’ì„ ì…ë ¥ë°›ìŒ
 
-	for (x = 1 ; x < 6 ; ++x)							// x´Â ÀüÃ¼¹İº¹È½¼ö
-		for (int y = 0; y < 5; ++y)						// y´Â ¹è¿­ÀÇ Ã·ÀÚ
+	for (x = 1 ; x < 6 ; ++x)							// xëŠ” ì „ì²´ë°˜ë³µíšŸìˆ˜
+		for (int y = 0; y < 5; ++y)						// yëŠ” ë°°ì—´ì˜ ì²¨ì
 		{
 			if (array[y] > array[y + 1])
 			{
 				iTemp = array[y];
-				array[y] = array[y + 1];			    //swap±¸¹®À» È°¿ëÇØ °ÅÇ° Á¤·Ä ±¸Çö
+				array[y] = array[y + 1];			    // swapêµ¬ë¬¸ì„ í™œìš©í•´ ê±°í’ˆ ì •ë ¬ êµ¬í˜„
 				array[y + 1] = iTemp;
 			}		
 		}
 
 	cout << '[' << array[0];
-	for (x = 1; x < 6; ++x)						        //Ãâ·Â¿¹½Ã´ë·Î Ãâ·ÂÇÏ±â À§ÇÑ 
+	for (x = 1; x < 6; ++x)						        // ì¶œë ¥ ì˜ˆì‹œëŒ€ë¡œ ì¶œë ¥
 		cout << ", " << array[x];
 	cout << ']' << endl;
 		
