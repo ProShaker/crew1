@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+   vector<int> array;
+   vector<vector<int>> commands;
+   int i, j, k, array_Length;
+   
+   cout << "배열의 길이를 입력해주세요. : ";                  //array, commands 1차원 배열의 길이를 입력받는다.
+   cin >> array_Length;
+   
+   cout << "array의 값을 입력해주세요. : ";
+   for(i = 0; i < array_Length; ++i)                         
+    cin >> array[i];
+   cout << "commands의 값을 입력해주세요. : ";
+   for(i = 0; i < array_Length; ++i)
+    for(j = 0; j < 3; ++j)                                    // array_Length에 맞춰 array와 commands의 값을 입력받는다. 
+        cin >> commands[i][j];
+    
+    for(int numb = 0; numb < array_Length; ++numb){
+        i = commands[numb][0];
+        j = commands[numb][1];                               // 0 ~ array_Length에서 i, j, k 값을 할당한다.
+        k = commands[numb][2];                              
+
+        sort(array[i-1],array[j-1]);      
+        array.push_back(array[i + k - 2]);                   // i부터 j까지 배열의 값을 정렬한 후, k번째 값을 array의 맨 뒤에 추가한다.
+    }
+    
+    cout << array.end() - 2 << ", " << array.end() - 1 << ", " << array.end() << endl;      // array 벡터 뒤에 추가했던 값을 순서대로 출력한다.
+}
