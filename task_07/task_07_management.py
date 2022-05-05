@@ -25,11 +25,10 @@ from task_07_func_define import func_save_book
 from task_07_func_define import func_getout
 from task_07_func_define import func_menu
 import task_07_DB
+
 def task_07_main():
     while(1):
         func_menu()
-        print("데이터 베이스 길이 : ", len(task_07_DB.book_lists))
-        print("장르 길이 : ", len(task_07_DB.book_genre))
 
         numb = int(input("원하는 번호를 선택해주세요. : "))
         if(numb == 1) : 
